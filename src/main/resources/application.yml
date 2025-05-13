@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: BankingApiApplication
+
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: bankingmanagement
+logging:
+  level:
+    root: DEBUG
+    com.practice.spring_mongo.BankingAPI: DEBUG
+  file:
+    name: D:\Projects\BankingAPI\bankingmngmt.log
