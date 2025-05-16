@@ -114,7 +114,7 @@ public class BankServiceImpl implements BankService {
             throw new BankDetailsNotFound("Bank Details not found");
         }
         bankRepository.deleteById(id);
-        String msg= "Bank Details not found";
+        String msg= "Record has been deleted";
         log.info("Outside AccountServiceImpl.delete");
         return msg;
     }

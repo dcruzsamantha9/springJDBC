@@ -54,7 +54,7 @@ public class AccountController {
         return new ResponseEntity<>(accountTO, HttpStatus.OK);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteById(@RequestParam("id") String id) throws AccountNotFound{
         log.info("Inside AccountController.delete");
         String msg= accountService.delete(id);

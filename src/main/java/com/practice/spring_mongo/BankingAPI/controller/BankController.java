@@ -56,7 +56,7 @@ public class BankController {
         return new ResponseEntity<>(bankTO, HttpStatus.OK);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public ResponseEntity<String> delete(@PathVariable("id") String id) throws BankDetailsNotFound {
         log.info("Inside BankController.delete");
         String msg= bankService.delete(id);

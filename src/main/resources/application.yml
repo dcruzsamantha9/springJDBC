@@ -6,10 +6,17 @@ spring:
     mongodb:
       host: localhost
       port: 27017
-      database: bankingmanagement
+      database: banking-mngmnt-api
 logging:
   level:
     root: DEBUG
     com.practice.spring_mongo.BankingAPI: DEBUG
   file:
     name: D:\Projects\BankingAPI\bankingmngmt.log
+server:
+  port: 8080
+de:
+  flapdoodle:
+    mongodb:
+      embedded:
+        version : 5.0.5
