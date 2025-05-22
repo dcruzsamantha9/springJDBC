@@ -28,7 +28,7 @@ public class BankServiceImpl implements BankService {
 
         if (CollectionUtils.isEmpty(banks)) {
             log.error("Banks have no records");
-            throw new BankDetailsNotFound("Bank Details not found");
+            throw new BankDetailsNotFound("Bank details not found");
         }
 
         List<BankTO> bankTOS = banks.stream().map(bank ->
@@ -69,7 +69,7 @@ public class BankServiceImpl implements BankService {
 
         if (bankOptional1.isEmpty()) {
             log.error("No Details Found");
-            throw new BankDetailsNotFound("Bank Detail not found");
+            throw new BankDetailsNotFound("Bank details not found");
         }
 
         Bank bank = bankOptional1.get();
@@ -94,7 +94,7 @@ public class BankServiceImpl implements BankService {
 
         if(Objects.isNull(bank)){
             log.error("Bank Details not found");
-            throw new BankDetailsNotFound("Bank Details not found");
+            throw new BankDetailsNotFound("Bank details not found");
         }
 
         BankTO bankTO= new BankTO();
@@ -110,8 +110,8 @@ public class BankServiceImpl implements BankService {
         log.info("Inside BankController.delete");
         Optional<Bank> bankOptional= bankRepository.findById(id);
         if(bankOptional.isEmpty()) {
-            log.error("Bank Details not found");
-            throw new BankDetailsNotFound("Bank Details not found");
+            log.error("Bank details not found");
+            throw new BankDetailsNotFound("Bank details not found");
         }
         bankRepository.deleteById(id);
         String msg= "Record has been deleted";
